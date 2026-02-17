@@ -1,10 +1,10 @@
 import mysql.connector
 
 mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="root",
-  database="shop"
+host="localhost",
+user="root",
+password="root",
+database="shop"
 )
 mycursor = mydb.cursor()
 
@@ -55,8 +55,6 @@ class User:
         mycursor.execute("INSERT INTO orders (uid, pid) VALUES (%s, %s)", (self.uid, pid))
         mydb.commit()
         print("Order placed!")
-
-# use
 user = User()
 print("1. Signup")
 print("2. Signin")
