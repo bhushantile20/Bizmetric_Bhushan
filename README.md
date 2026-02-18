@@ -1,6 +1,13 @@
+
+Mini project :contains projects 
+Assignment.iynb :contains the problems that we solve and get as an assignment 
+python_coding_questions.ipynb  :contanis assigment questions on lambda function questions and logical questions 
+DB :folder cotnains the database related questions 
+oop: folderr contains the all the questions which i done with oops concepts 
+FH :folder contains all the questions related to file operations 
+pandas:This folder contains all the practice questions 
+
 # some file is missing 
-# I upload is as soon wait 
-# and readme also 
-in Assignment contains all the practice problems that we solve in class i format it into in single fiile 
+# I upload is as soon 
 
 
