@@ -1,12 +1,11 @@
-import pyodbc
+import mysql.connector
 
-SERVER = r"BT\\SQLEXPRESS"  # Change to your server name
-DATABASE = "BillingDB"
+server = "localhost"
+database = "BillingDB"
+username = "root"
+password = "root"
 
 def get_db():
-    return pyodbc.connect(
-        f"DRIVER={{ODBC Driver 17 for SQL Server}};"
-        f"SERVER={SERVER};"
-        f"DATABASE={DATABASE};"
-        f"Trusted_Connection=yes;"
+    return mysql.connector.connect(
+        host=server, database=database, user=username, password=password
     )

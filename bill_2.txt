@@ -1,0 +1,6 @@
+=== bill ===
+customer: bhushan
+item: samosa
+quantity:  5
+rs15.00 - 5 = rs75.00
+============
