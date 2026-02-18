@@ -1,5 +1,5 @@
 
-Mini project :contains projects \n 
+Mini project :contains projects 
 
 Assignment.iynb :contains the problems that we solve and get as an assignment 
 
@@ -7,7 +7,7 @@ python_coding_questions.ipynb  :contanis assigment questions on lambda function 
 
 DB :folder cotnains the database related questions 
 
-oop: folderr contains the all the questions which i done with oops concepts 
+oop: folder contains the all the questions which i done with oops concepts 
 
 FH :folder contains all the questions related to file operations 
 
