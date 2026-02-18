@@ -1,39 +1,3 @@
-# from config import get_db
-
-
-# def get_int(msg):
-#     while true:
-#         try:
-#             return int(input(msg))
-#         except:
-#             print("enter number!")
-
-
-# def get_text(msg):
-#     while true:
-#         val = input(msg).strip()
-#         if val:
-#             return val
-#         print("enter value!")
-
-
-# def db_query(sql, params=(), get_data=False):
-#     try:
-#         conn = get_db()
-#         cur = conn.cursor()
-#         cur.execute(sql, params)
-
-#         if get_data:
-#             data = cur.fetchall()
-#             cur.close()
-#             conn.close()
-#             return data
-#         else:
-#             conn.commit()
-#             cur.close()
-#             conn.close()
-#     except exception as e:
-#         print(f"datnase error: {e}")
 
 from config import get_db
 
