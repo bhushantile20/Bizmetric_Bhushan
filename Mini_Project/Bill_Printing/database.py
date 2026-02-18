@@ -1,3 +1,4 @@
+#i done with it using the classes 
 
 from config import get_db
 
@@ -29,6 +30,7 @@ def db_query(sql, params=(), get_data=False):
             conn.commit()
             cur.close()
             conn.close()
+            
     except Exception as e:
         print(f"datnase error: {e}")
 
@@ -41,7 +43,6 @@ def add_cust():
     except:
         print("customer add failed!")
 
-
 def add_prod():
     try:
         name = input("product: ")
@@ -53,7 +54,6 @@ def add_prod():
         print("product added!")
     except:
         print("product add failed!")
-
 
 def show_cust():
     try:
@@ -98,22 +98,16 @@ def order():
     except:
         print("order failed!")
 
-
-
 def bill():
     try:
         oid = get_int("order id: ")
-        row = db_query(
-            """
+        row = db_query("""
             select c.name, p.product_name, p.price, o.quantity 
             from order_details o 
             join customer c on o.customer_id=c.customer_id 
             join product_details p on o.product_id=p.product_id 
             where o.order_id=%s
-        """,
-            (oid,),
-            get_data=True,
-        )
+        """, (oid,), get_data=True)
 
         if not row:
             print("no order!")
@@ -121,29 +115,35 @@ def bill():
 
         r = row[0]
         total = r[2] * r[3]
-        print("\n --- your bill---")
-        print(f"cust: {r[0]}")
-        print(f"item: {r[1]}")
-        print(f"qty:  {r[3]}")
-        print(f"rs{r[2]} - {r[3]} = rs{total}")
+        
+        print("\n" + "="*25)
+        print(" curry leave's")
+        print("="*25)
+        print(f"sr  menu  qty  price")
+        print("-"*25)
+        print(f"1  {r[1]:<6} {r[3]:<3} {int(r[2])}")
+        print("-"*25)
+        print(f"total{'':<15} {int(total)}")
+        print("="*25)
+        
 
         f = open(f"bill_{oid}.txt", "w")
-        f.write("=== bill ===\n")
-        f.write(f"customer: {r[0]}\n")
-        f.write(f"item: {r[1]}\n")
-        f.write(f"quantity:  {r[3]}\n")
-        f.write(f"rs{r[2]} - {r[3]} = rs{total}\n")
-        f.write("============")
+        f.write("="*25 + "\n")
+        f.write("welcome to curryleaves \n")
+        f.write("="*25 + "\n")
+        f.write("sr  menu  qty  price\n")
+        f.write("-"*25 + "\n")
+        f.write(f"1  {r[1]:<6} {r[3]:<3} {int(r[2])}\n")
+        f.write("-"*25 + "\n")
+        f.write(f"total{'':<15} {int(total)}\n")
+        f.write("="*25 + "\n")
         f.close()
         print(f"saved to bill_{oid}.txt")
 
-        print("---thank you for ordering---")
-
-        if get_text("save? y/n: ") == "y":
-            db_query(
-                "insert into transaction_details(order_id, total_amount) values (%s, %s)",
-                (oid, total),
-            )
-            print("saved!")
+        if get_text("save to db? y/n: ") == "y":
+            db_query("insert into transaction_details(order_id, total_amount) values (%s, %s)", (oid, total))
+            print("saved to db!")
+            
     except:
         print("bill failed!")
+
