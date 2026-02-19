@@ -1,17 +1,25 @@
+# Structure:
 
-Mini project :contains projects 
+# Mini Project/
+Includes complete project implementations:
 
-Assignment.iynb : Contains the problems that we solve and get as an assignment 
+# Transacto – Banking Management System
+Python-based banking application with account management, transactions, database integration, OOP, and exception handling.
 
-Python_coding_questions.ipynb  : Contanis assigment questions on lambda function questions and logical questions
+# Bill Management System
+Billing system supporting calculation, validation, and database connectivity.
 
-DB : Folder cotnains the database related questions 
+# FeeSphere – College Fee Calculator
+Fee calculation system based on multiple student parameters with validation and structured logic.
 
-<-- oop: Folder contains the all the questions which i done with oops concepts -->
+# Assignment.ipynb
+Solved academic assignment problems. all problems based on file handling ,oops 
 
-FH :folder contains all the questions related to file operations 
+# Python_coding_questions.ipynb
+Practice questions on lambda functions and logical programming.
 
-pandas:This folder contains all the practice questions 
+DB/
+Database-related exercises and SQL practice.
 
-
-
+pandas/
+Pandas-based data analysis and transformation practice.
