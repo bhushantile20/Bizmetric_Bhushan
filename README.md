@@ -1,15 +1,15 @@
 # Structure:
 
-# Mini Project/
+# Mini Project
 Includes complete project implementations:
 
-# Transacto – Banking Management System
+ Transacto – Banking Management System
 Python-based banking application with account management, transactions, database integration, OOP, and exception handling.
 
-# Bill Management System
+ Bill Management System
 Billing system supporting calculation, validation, and database connectivity.
 
-# FeeSphere – College Fee Calculator
+ FeeSphere – College Fee Calculator
 Fee calculation system based on multiple student parameters with validation and structured logic.
 
 # Assignment.ipynb
