@@ -1,0 +1,3 @@
+Python -m venv env 
+
+ENV_name\Scripts\Active

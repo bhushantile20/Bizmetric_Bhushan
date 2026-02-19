@@ -32,7 +32,7 @@ def db_query(sql, params=(), get_data=False):
             conn.close()
             
     except Exception as e:
-        print(f"datnase error: {e}")
+        print(f"database error: {e}")
 
 def add_cust():
     try:
