@@ -13,7 +13,5 @@ FH :folder contains all the questions related to file operations
 
 pandas:This folder contains all the practice questions 
 
-# some file is missing 
-# I upload is as soon 
 
 
