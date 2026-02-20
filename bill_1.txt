@@ -1,6 +1,0 @@
-=== bill ===
-customer: Ram
-item: Idli
-quantity:  3
-rs60.00 - 3 = rs180.00
-============
